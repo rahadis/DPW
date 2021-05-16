@@ -1,0 +1,87 @@
+body{
+	background-color: #d63b3b;
+	min-width: 50em;}
+
+div.header{
+	border:2px solid black;
+	height: 5em;
+	background-color: red;}
+
+
+div.menu{
+	border: 2px dashed black;
+	background-color: #b90606;
+	height: 1.1em;
+	margin-top: 0.1em;
+	margin-bottom: 0.2em;
+	padding: 0.3em;
+	padding-left: 0.5em; 
+	text-align: center;}
+
+a.tombol{
+	text-decoration: none;
+	width: 0.5em;
+	height: 1em;
+	margin-right: 2em;
+	color: white;}
+
+
+div.sidebar{
+	background-color: #ff1400;
+	border: 2px solid black;
+	width: 20em;
+	height: 15em;
+	margin: 0.2em;
+	padding: 0.1em;
+	float: left;}
+
+div.box1, .box2, .box3{
+	margin: 0.1em;
+	width: 9.6em;
+	border: 1px solid pink;
+	background-color: white;}
+
+div.box1, .box3{
+	height: 7.1em;
+	float: right;}
+div.box2{
+	height: 14.6em;
+	float: left;}
+
+
+div.content{
+	padding: 0.5em;
+	border: 2px solid black;
+	background-color: white;
+	height: 55em;}
+
+div.footer{ 
+	border: 0.1em dashed black;
+	background-color: #ff1818;
+	height: 4em;
+	padding: 0.2em;
+	margin: 0.2em;
+	clear: both;}
+.judul{
+	text-align: center;
+}
+.selesai{
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	margin-left: 30em;
+	margin-right: 30em;
+}
+.masukan{
+	width: 70em;
+}
+textarea{
+	height: 5em;
+	width: 70em;
+}
+.bgForm{
+	background-color: white;
+}
+.peringatan{
+	color: red;
+	visibility: hidden;
+}

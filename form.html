@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Layout</title>
+	<link rel="stylesheet" type="text/css" href="forms.css">
+	<script type="text/javascript" src="form.js"></script>
+</head>
+<body>
+	<div class="header">
+		<h1></h1>
+	</div>
+
+	<div class="menu">
+		<a href="layout.html" class="tombol">Homepage</a>
+		<a href="form.html" class="tombol">Form</a>
+		<a href="about.html" class="tombol">About Us</a>
+	</div>
+
+	<div class="sidebar">
+		<div class="box1">
+		</div>
+
+		<div class="box2">
+		</div>
+
+		<div class="box3">
+		</div>
+	</div>
+
+	<div class="content">
+		<h1 class="judul">FORM PENDAFTARAN</h1>
+		<p>Dalam memriahkan acara HUT RI yang ke-76 anda bisa ikut berpartisipasi dengan mendaftarkan diri anda pada acara lomba lari marathon.</p>
+		<form name="myForm" action="submit.html" method="get" onsubmit="return validate();">
+			<fieldset class="bgForm">
+							<!-- Nama Lengkap -->
+							<!-- Nama Lengkap -->
+				<label for="nama">Nama Lengkap:</label><br>
+				<input type="text" name="name" id="nama" class="masukan" onchange="return checkValueName();"><br>
+				<span class="peringatan" id="nameMissing">Nama harus diisi dan harus huruf semua!</span><br><br>
+							<!-- Telepon -->
+							<!-- Telepon -->
+				<label for="tel">Telepon:</label><br>
+				<input type="text" name="telephone" id="tel"class="masukan" placeholder="eg: xxxxxxxxxx" onchange="return checkValueTel();"><br>
+				<span class="peringatan" id="telMissing">Telepon harus diisi dan dengan format 10 digit nomor terakhir!</span><br><br>
+							<!-- Email -->
+							<!-- Email -->
+				<label for="mail">E-mail:</label><br>
+				<input type="text" name="mail" id="mail"class="masukan" placeholder="eg: nama@gmail.com" onchange="return checkMailMatch();"><br>
+				<span class="peringatan" id="mailNotMatch">E-mail harus diisi dengan benar</span><br><br>
+							<!-- Tanggal lahir -->
+							<!-- Tanggal lahir -->
+				<label for="tgl">Tanggal Lahir:</label><br>
+				<input type="text" name="tgl" id="tgl"class="masukan" placeholder="yyy/mm/dd" onchange="return checkValueTGL();"><br>
+				<span class="peringatan" id="tglMissing">Tanggal lahir anda harus diisi dan perhatikan format tanggal!</span><br><br><br>
+							<!-- DropDown -->
+							<!-- DropDown -->
+				<select name="kota" class="masukan" onchange="return checkValueKota();">
+						<option value="1">- Fakultas -</option>
+						<option value="2">Hukum</option>
+						<option value="3">Ekonomi dan bisnis</option>
+						<option value="4">Teknik</option>
+						<option value="5">Pendidikan</option>
+						<option value="6">Ilmu sosial dan budaya</option>
+						<option value="7">Pertanian</option>
+						<option value="8">Keislaman</option>
+				</select><br>
+				<span class="peringatan" id="kotaMissing">Pilih fakultas anda!</span><br><br>
+							<!-- Alamat -->
+							<!-- Alamat -->
+				<label for="alamat">Alamat detail:</label><br>
+				<textarea id="alamat" name="alamat" onchange="return checkValueAlamat();"></textarea><br>
+				<span class="peringatan" id="alamatMissing">Isi alamat detail anda!</span><br><br>
+							<!-- Kupon -->
+							<!-- Kupon -->
+				<label for="kupon">jumlah kupon yang ingin dibeli:</label><br>
+				<input type="text" name="kupon" id="kupon"class="masukan" onchange="return checkValueKupon();"><br>
+				<span class="peringatan" id="kuponMissing">Jumlah kupon harus diisi dan harus numerik</span><br><br>
+							<!-- Pesanan -->
+							<!-- Pesanan -->
+				<div>Jarak tempuh yang ingin diikuti :</div>
+				<label for="lima_km">5 KM</label>
+				<input type="checkbox" name="lima" id="lima_km" value="50000">
+				<label for="sepuluh_km">10 KM</label>
+				<input type="checkbox" name="sepuluh" id="sepuluh_km" value="75000">
+				<label for="limabelas_km">15 KM</label>
+				<input type="checkbox" name="limabelas" id="limabelas_km" value="100000"><br>
+				<span class="peringatan" id="checkMissing">Anda harus memilih jarak tempuh dan anda bisa memilih lebih dari 1</span><br><br>
+							<!-- pembayaran -->
+							<!-- pembayaran -->
+				<div>Metode pembayaran kupon dan pendaftaran:</div>
+				<label for="cod">Bayar ditempat</label>
+				<input name="bayar" id="cod" value="cod" type="radio">
+				<label for="tf">Transfer</label>
+				<input name="bayar" id="tf" value="tf" type="radio">
+				<span class="peringatan" id="radioMissing" >Anda harus memilih metode pembayaran!</span><br>
+				<span class="peringatan" id="chooseTF" >Silahkan lakukan pembayaran melalui Bank BNI:123-456-7890 A/N: Tim B09</span><br><br>
+							<!-- submit -->
+							<!-- submit -->
+				<input type="submit" name="submit" class="selesai"> 
+			</fieldset>
+		</form>
+</body>
+</html>
